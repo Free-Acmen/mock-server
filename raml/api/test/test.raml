@@ -1,0 +1,22 @@
+description: test api
+get: 
+  description: get res
+  queryParameters:
+    id:
+      required: true
+      type: "number"
+      example: 1212121
+    name:
+      description: name query
+      required: false
+      type: string
+      example: lili
+  responses: 
+    200:
+      headers:
+        cache-control: 
+          example: |
+            public, no-cache 
+      body:
+        type: "object"
+        example: !include ./test.json
